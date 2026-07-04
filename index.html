@@ -1,54 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+
+            <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashmi Portfolio</title>
+    <title>Mini CRM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Rashmi Medisi</h1>
-        <p>Aspiring Full Stack Web Developer</p>
-    </header>
+    <h1>Client Lead Management System</h1>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            Hello! I am Rashmi. I am learning Full Stack Web Development
-            and building projects to improve my skills.
-        </p>
-    </section>
+    <div class="form-container">
+        <input type="text" id="name" placeholder="Client Name">
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub</li>
-        </ul>
-    </section>
+        <input type="email" id="email" placeholder="Client Email">
 
-    <section>
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>My personal portfolio website built using HTML, CSS and JavaScript.</p>
-        </div>
-    </section>
+        <input type="text" id="source" placeholder="Lead Source">
 
-    <section>
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name"><br><br>
-            <input type="email" placeholder="Your Email"><br><br>
-            <textarea placeholder="Your Message"></textarea><br><br>
-            <button type="button" onclick="showMessage()">Send Message</button>
-        </form>
-    </section>
+        <select id="status">
+            <option>New</option>
+            <option>Contacted</option>
+            <option>Converted</option>
+        </select>
 
-    <footer>
-        <p>
-            
+        <button onclick="addLead()">Add Lead</button>
+    </div>
+
+    <h2>Lead List</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Source</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="leadTable">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
